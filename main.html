@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Synesthetic Playground</title>
+	<script type="text/javascript" src="paper-full.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/1.1.29/howler.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="circles.css">
+
+	<script type="text/paperscript" canvas="myCanvas">
+
+	var sound1 = new Howl({urls: ['SoundsA/bubbles.mp3']});     	var sound14 = new Howl({urls: ['SoundsA/piston-3.mp3']}); 
+	var sound2 = new Howl({urls: ['SoundsA/clay.mp3']});     		var sound15 = new Howl({urls: ['SoundsA/prism-1.mp3']});
+	var sound3 = new Howl({urls: ['SoundsA/confetti.mp3']});    	var sound16 = new Howl({urls: ['SoundsA/prism-2.mp3']});
+	var sound4 = new Howl({urls: ['SoundsA/corona.mp3']});     		var sound17 = new Howl({urls: ['SoundsA/prism-3.mp3']});
+	var sound5 = new Howl({urls: ['SoundsA/dotted-spiral.mp3']});   var sound18 = new Howl({urls: ['SoundsA/splits.mp3']});
+	var sound6 = new Howl({urls: ['SoundsA/flash-1.mp3']});     	var sound19 = new Howl({urls: ['SoundsA/squiggle.mp3']});
+	var sound7 = new Howl({urls: ['SoundsA/flash-2.mp3']});     	var sound20 = new Howl({urls: ['SoundsA/strike.mp3']});
+	var sound8 = new Howl({urls: ['SoundsA/flash-3.mp3']});     	var sound21 = new Howl({urls: ['SoundsA/suspension.mp3']});
+	var sound9 = new Howl({urls: ['SoundsA/glimmer.mp3']});     	var sound22 = new Howl({urls: ['SoundsA/timer.mp3']});
+	var sound10 = new Howl({urls: ['SoundsA/moon.mp3']});    		var sound23 = new Howl({urls: ['SoundsA/ufo.mp3']});
+	var sound11 = new Howl({urls: ['SoundsA/pinwheel.mp3']});    	var sound24 = new Howl({urls: ['SoundsA/veil.mp3']});
+	var sound12 = new Howl({urls: ['SoundsA/piston-1.mp3']});    	var sound25 = new Howl({urls: ['SoundsA/wipe.mp3']});
+	var sound13 = new Howl({urls: ['SoundsA/piston-2.mp3']});    	var sound26 = new Howl({urls: ['SoundsA/zig-zag.mp3']});
+	
+
+	
+
+
+
+	//A
+	var circles = [];
+	//B
+	var rectangles = [];
+	var rectangles2 = [];
+	var rectangles3 = [];
+	//C
+	var squares = [];
+	//D
+	var bigRectangle = [];
+	//E 
+	var circles2 = [];
+	//F
+	var rotatings = [];
+	//G
+	var bubblez = [];
+	//H
+	var colorFlash = [];
+	//I
+	var skewBoxes=[];
+	//J
+	var shearBox=[];
+	//K
+	var kay = [];    var kay5 = [];
+	var kay2 = [];   var kay6 = [];
+	var kay3 = [];   var kay7 = [];
+	var kay4 = [];
+	//L
+	var flashL = [];
+	//M
+	var value = [];
+	//N
+	var arrN1=[];
+	var arrN2=[];
+	var arrN3=[];
+	var arrN4=[];
+	var arrN5=[];
+	//O
+	var rain = [];    var rain5 = [];   var rain9 = [];
+	var rain2 = [];   var rain6 = [];
+	var rain3 = [];   var rain7 = [];
+	var rain4 = [];   var rain8 = [];
+	//P
+	var screenCover = [];
+	var screenCover2 = [];
+	var screenCover3 = [];
+	//Q
+	var slider=[];
+	var slider2=[];
+	var slider3=[];
+	var slider4=[];
+	//R
+	var triArr=[];
+	//S
+	var sep=[];
+	var sep2=[];
+	var sep3=[];
+	var sep4=[];
+	//T
+	var arrT=[];
+	//u
+	var poly=[];
+	//v
+	var bounce=[];     var bounce5=[]; 
+	var bounce2=[];    var bounce6=[]; 
+	var bounce3=[];    
+	var bounce4=[]; 
+	//w
+	triangleStars=[];    triangleStars5=[];
+	triangleStars2=[];   triangleStars6=[];
+	triangleStars3=[];   triangleStars7=[];
+	triangleStars4=[];
+	//x
+	var arrX=[];
+	var arrX2=[];
+	var arrX3=[];
+	var arrX4=[];
+	var arrX5=[];
+	//Y
+	var open=[];
+	var open2=[];
+	//Z
+	var arrZ=[];
+
+
+	
+function onKeyDown(event) {
+	
+	
+	if(event.key==="a"){	
+ 	    //A
+ 	    sound1.play();
+ 	   
+		var middle = new Point(605, 300);
+
+ 	    var newCircle = new Path.Circle(middle, 200);  
+		newCircle.fillColor = "orange";
+		circles.push(newCircle);
+
+	}if(event.key==="b"){
+					//For Rectangle at B
+					sound2.play();
+					var point1 = new Point(400, 450);
+					var size1 = new Size(400, 50);
+
+					var point2 =new Point(400, 350);
+					var size2 = new Size(400, 50);
+
+					var point3 =new Point(400, 250);
+					var size3 = new Size(400, 50);
+					
+					var newRectangle1 = new Path.Rectangle(point1, size1); 
+					newRectangle1.fillColor = "red";
+					rectangles.push(newRectangle1);
+
+					var newRectangle2 = new Path.Rectangle(point2, size2); 
+					newRectangle2.fillColor = "red";
+					rectangles2.push(newRectangle2);
+
+					var newRectangle3 = new Path.Rectangle(point3, size3); 
+					newRectangle3.fillColor = "red";
+					rectangles3.push(newRectangle3);
+
+	}if(event.key==="c"){
+		//For 4 Squares at C
+		sound3.play();
+		var point4 =new Point(10, 10);
+		var size4 = new Size(250, 250);
+
+		var point5 =new Point(1015, 10);
+		var size5 = new Size(250, 250);
+
+		var point6 =new Point(10, 400);
+		var size6 = new Size(250, 250);
+
+		var point7 =new Point(1015, 400);
+		var size7 = new Size(250, 250);
+
+		var topLeft = new Path.Rectangle(point4, size4); 
+		topLeft.fillColor = "#F5930A";
+		squares.push(topLeft);
+
+		var topRight = new Path.Rectangle(point5, size5); 
+		topRight.fillColor = "#F5930A";
+		squares.push(topRight);
+
+		var bottomLeft = new Path.Rectangle(point6, size6); 
+		bottomLeft.fillColor = "#F5930A";
+		squares.push(bottomLeft);
+
+		var bottomRight = new Path.Rectangle(point7, size7); 
+		bottomRight.fillColor = "#F5930A";
+		squares.push(bottomRight);
+
+	}if(event.key==="d"){
+					//For giant rectangle at D
+					sound10.play();
+					var point8 =new Point(10, 10);
+					var size8 = new Size(1250, 800);
+
+					var rectangleFlash = new Path.Rectangle(point8, size8); 
+					rectangleFlash.fillColor = "#B5D8F7";
+					bigRectangle.push(rectangleFlash);
+
+	}if(event.key==="e"){
+		//E is a circle
+		sound4.play();
+		var maxPoint1 = new Point(view.size.width, view.size.height);
+		var randomPoint1 = Point.random();
+		var posPoint1 = maxPoint1 * randomPoint1;
+		var size1 = new Size(30);
+
+
+		var newCircle2 = new Path.Circle(posPoint1, size1);  
+		newCircle2.fillColor = "white";
+		circles2.push(newCircle2);
+
+	}if(event.key==="f"){
+					
+					//For roatating square at F
+					sound6.play();
+					var point9 =new Point(500, 200);
+					var size9 = new Size(250, 250);
+
+					var rotatingSquare = new Path.Rectangle(point9, size9); 
+					rotatingSquare.fillColor = "#F5930A";
+					rotatings.push(rotatingSquare);
+					
+
+	}if(event.key==="g"){
+		//G is the bubblez
+		sound7.play();
+		var maxPoint = new Point(view.size.width, view.size.height);
+		var randomPoint = Point.random();
+		var posPoint = maxPoint * randomPoint;
+		var newBubble = new Path.Circle(posPoint, 500);  
+
+		newBubble.fillColor = "orange";
+		bubblez.push(newBubble);
+
+	}if(event.key==="h"){				
+					//H for color flash
+					sound8.play();
+					var point10 =new Point(10, 10);
+					var size10 = new Size(1250, 800);
+
+					var newScreen = new Path.Rectangle(point10, size10); 
+					newScreen.fillColor = "purple";
+					colorFlash.push(newScreen);
+
+	}if(event.key==="i"){
+		//I for skewing boxes
+		sound9.play();
+		var point11 = new Point(75, 200);
+		var size11 = new Size(300,300);
+
+		var point12 = new Point(900, 200);
+		var size12 = new Size(300,300);
+
+		var box1 = new Path.Rectangle(point11, size11); 
+		box1.fillColor = "#F5930A";
+		skewBoxes.push(box1);
+
+		var box2 = new Path.Rectangle(point12, size12); 
+		box2.fillColor = "#F5930A";
+		skewBoxes.push(box2);
+
+		}if(event.key==="j"){			
+					//J for fast shearing box
+					sound5.play();
+					var point13 =new Point(500, 200);
+					var size13 = new Size(100, 100);
+
+					var box3 = new Path.Rectangle(point13, size13); 
+					box3.fillColor = "gray";
+					shearBox.push(box3);
+
+	}if(event.key==="k"){
+					sound11.play();
+					var maxPoint1 = new Point(view.size.width, view.size.height);
+					var randomPoint1 = Point.random();
+					var posPoint1 = maxPoint1 * randomPoint1;
+					var size1 = new Size(100);
+
+					var maxPoint2 = new Point(view.size.width, view.size.height);
+					var randomPoint2 = Point.random();
+					var posPoint2 = maxPoint2 * randomPoint2;
+					var size2 = new Size(50);
+					
+					var maxPoint3 = new Point(view.size.width, view.size.height);
+					var randomPoint3 = Point.random();
+					var posPoint3 = maxPoint3 * randomPoint3;
+					var size3 = new Size(120);
+
+					var maxPoint4 = new Point(view.size.width, view.size.height);
+					var randomPoint4 = Point.random();
+					var posPoint4 = maxPoint4 * randomPoint4;
+					var size4 = new Size(75);
+
+					var maxPoint5 = new Point(view.size.width, view.size.height);
+					var randomPoint5 = Point.random();
+					var posPoint5 = maxPoint5 * randomPoint5;
+					var size5 = new Size(80);
+
+					var maxPoint6 = new Point(view.size.width, view.size.height);
+					var randomPoint6 = Point.random();
+					var posPoint6 = maxPoint6 * randomPoint6;
+					var size6 = new Size(110);
+
+					var maxPoint7 = new Point(view.size.width, view.size.height);
+					var randomPoint7 = Point.random();
+					var posPoint7 = maxPoint7 * randomPoint7;
+					var size7 = new Size(100);
+					
+					var newSponge = new Path.Circle(posPoint1, size1); 
+					kay.push(newSponge);
+
+					var newSponge2 = new Path.Circle(posPoint2, size2); 
+					kay2.push(newSponge2);
+
+					var newSponge3 = new Path.Circle(posPoint3, size3); 
+					kay3.push(newSponge3);
+
+					var newSponge4 = new Path.Circle(posPoint4, size4); 
+					kay4.push(newSponge4);
+
+					var newSponge5 = new Path.Circle(posPoint5, size5); 
+					kay5.push(newSponge5);
+
+					var newSponge6 = new Path.Circle(posPoint6, size6); 
+					kay6.push(newSponge6);
+
+					var newSponge7 = new Path.Circle(posPoint7, size7); 
+					kay7.push(newSponge7);
+
+		
+	}if(event.key==="l"){
+		sound12.play();
+		var point14 =new Point(10, 10);
+		var size14 = new Size(1250, 800);
+
+		var newScreen2 = new Path.Rectangle(point14, size14); 
+		newScreen2.fillColor = "#5FED91";
+		flashL.push(newScreen2);
+
+	}if(event.key==="m"){
+				sound13.play();
+				var point15 =new Point(-5, -5);
+				var size15 = new Size(1400, 350);
+
+				var newScreen3 = new Path.Rectangle(point15, size15); 
+				newScreen3.fillColor = "#5FED91";
+				value.push(newScreen3);
+
+	}if(event.key==="n"){
+					sound14.play();
+					var middle1 = new Point(600, 75);
+					var size1 = new Size(60);
+					var newCirc1 = new Path.Circle(middle1, size1); 
+					arrN1.push(newCirc1);
+
+					var middle2 = new Point(600, 200);
+					var newCirc2 = new Path.Circle(middle2, size1); 
+					arrN2.push(newCirc2);
+
+					var middle3 = new Point(600, 325);
+					var newCirc3 = new Path.Circle(middle3, size1); 
+					arrN3.push(newCirc3);
+
+					var middle4 = new Point(600, 450);
+					var newCirc4 = new Path.Circle(middle4, size1); 
+					arrN4.push(newCirc4);
+
+					var middle5 = new Point(600, 575);
+					var newCirc5 = new Path.Circle(middle5, size1); 
+					arrN5.push(newCirc5);
+
+	}if(event.key==="o"){
+					sound15.play();
+					var maxPoint1 = new Point(view.size.width, view.size.height);
+					var randomPoint1 = Point.random();
+					var posPoint1 = maxPoint1 * randomPoint1;
+					var size1 = new Size(10);
+
+					var maxPoint2 = new Point(view.size.width, view.size.height);
+					var randomPoint2 = Point.random();
+					var posPoint2 = maxPoint2 * randomPoint2;
+					var size2 = new Size(20);
+					
+					var maxPoint3 = new Point(view.size.width, view.size.height);
+					var randomPoint3 = Point.random();
+					var posPoint3 = maxPoint3 * randomPoint3;
+					var size3 = new Size(25);
+
+					var maxPoint4 = new Point(view.size.width, view.size.height);
+					var randomPoint4 = Point.random();
+					var posPoint4 = maxPoint4 * randomPoint4;
+					var size4 = new Size(30);
+
+					var maxPoint5 = new Point(view.size.width, view.size.height);
+					var randomPoint5 = Point.random();
+					var posPoint5 = maxPoint5 * randomPoint5;
+					var size5 = new Size(35);
+
+					var maxPoint6 = new Point(view.size.width, view.size.height);
+					var randomPoint6 = Point.random();
+					var posPoint6 = maxPoint6 * randomPoint6;
+					var size6 = new Size(45);
+
+					var maxPoint7 = new Point(view.size.width, view.size.height);
+					var randomPoint7 = Point.random();
+					var posPoint7 = maxPoint7 * randomPoint7;
+					var size7 = new Size(50);
+
+					var maxPoint8 = new Point(view.size.width, view.size.height);
+					var randomPoint8 = Point.random();
+					var posPoint8 = maxPoint8 * randomPoint8;
+					var size8 = new Size(60);
+
+					var maxPoint9 = new Point(view.size.width, view.size.height);
+					var randomPoint9 = Point.random();
+					var posPoint9 = maxPoint9 * randomPoint9;
+					var size9 = new Size(65);
+
+					var newSponge = new Path.Circle(posPoint1, size1); 
+					rain.push(newSponge);
+
+					var newSponge2 = new Path.Circle(posPoint2, size2); 
+					rain2.push(newSponge2);
+
+					var newSponge3 = new Path.Circle(posPoint3, size3); 
+					rain3.push(newSponge3);
+
+					var newSponge4 = new Path.Circle(posPoint4, size4); 
+					rain4.push(newSponge4);
+
+					var newSponge5 = new Path.Circle(posPoint5, size5); 
+					rain5.push(newSponge5);
+
+					var newSponge6 = new Path.Circle(posPoint6, size6); 
+					rain6.push(newSponge6);
+
+					var newSponge7 = new Path.Circle(posPoint7, size7); 
+					rain7.push(newSponge7);
+
+					var newSponge8 = new Path.Circle(posPoint8, size8); 
+					rain8.push(newSponge8);
+
+					var newSponge9 = new Path.Circle(posPoint9, size9); 
+					rain9.push(newSponge9);
+
+	}if(event.key==="p"){
+		sound16.play();
+		var point1 =new Point(1, 1);
+		var size1 = new Size(425, 800);
+
+		var leftMost = new Path.Rectangle(point1, size1); 
+		leftMost.fillColor = "purple";
+		screenCover.push(leftMost);
+
+
+		var point2 =new Point(425, 1);
+		var size2 = new Size(425, 800);
+
+		var middleMost = new Path.Rectangle(point2, size2); 
+		middleMost.fillColor = "purple";
+		screenCover2.push(middleMost);
+
+
+		var point3 =new Point(850, 1);
+		var size3 = new Size(430, 800);
+
+		var rightMost = new Path.Rectangle(point3, size3); 
+		rightMost.fillColor = "purple";
+		screenCover3.push(rightMost);
+
+	}if(event.key==="q"){
+		sound17.play();
+		var point1 =new Point(1, 1);
+		var size1 = new Size(1275, 175);
+
+		var topFirst = new Path.Rectangle(point1, size1); 
+		topFirst.fillColor = "purple";
+		slider.push(topFirst);
+
+
+		var point2 =new Point(1, 177);
+		var mid2 = new Path.Rectangle(point2, size1); 
+		mid2.fillColor = "purple";
+		slider2.push(mid2);
+
+		var point3 =new Point(1, 354);
+		var mid3 = new Path.Rectangle(point3, size1); 
+		mid3.fillColor = "purple";
+		slider3.push(mid3);
+
+		var point4 =new Point(1, 530);
+		var bottom4 = new Path.Rectangle(point4, size1); 
+		bottom4.fillColor = "purple";
+		slider4.push(bottom4);
+
+	}if(event.key==="r"){
+		sound18.play();
+		var point1 =new Point(100, 250);
+		var triangle = new Path.RegularPolygon(point1, 3, -150);
+		triangle.fillColor = '#e9e9ff';
+		triArr.push(triangle);
+
+	}if(event.key==="s"){
+		sound19.play();
+		var point1 =new Point(600, 325);
+		var triangle = new Path.RegularPolygon(point1, 3, 100);
+		triangle.fillColor = '#e9e9ff';
+		sep.push(triangle);
+
+		var point2 =new Point(513, 275);
+		var leftTriangle = new Path.RegularPolygon(point2, 3, -100);
+		leftTriangle.fillColor = '#e9e9ff';
+		sep2.push(leftTriangle);
+
+		var point3 =new Point(688, 275);
+		var rightTriangle = new Path.RegularPolygon(point3, 3, -100);
+		rightTriangle.fillColor = '#e9e9ff';
+		sep3.push(rightTriangle);
+
+		var point4 =new Point(600, 425);
+		var bottomTriangle = new Path.RegularPolygon(point4, 3, -100);
+		bottomTriangle.fillColor = '#e9e9ff';
+		sep4.push(bottomTriangle);
+	
+	}if(event.key==="t"){
+		sound20.play();
+		var point1 =new Point(450, -125);
+		var size1 = new Size(300, 300);
+
+		var fan = new Path.Rectangle(point1, size1); 
+		//fan.fillColor = "purple";
+		arrT.push(fan);
+		
+	}if(event.key==="u"){
+		sound21.play();
+		var point1 =new Point(600, 325);
+		var se7en = new Path.RegularPolygon(point1, 7, 200);
+		se7en.fillColor = '#FF6969';
+		poly.push(se7en);
+
+	}if(event.key==="v"){
+		sound22.play();
+		var middle = new Point(605, 70);
+		var bouncy = new Path.Circle(middle, 50);  
+		bouncy.fillColor = "orange";
+		bounce.push(bouncy);
+
+		var leftTop = new Point(200, 70);
+		var bouncy2 = new Path.Circle(leftTop, 50);  
+		bouncy2.fillColor = "orange";
+		bounce2.push(bouncy2);
+
+		var rightTop = new Point(1000, 70);
+		var bouncy3 = new Path.Circle(rightTop, 50);  
+		bouncy3.fillColor = "orange";
+		bounce3.push(bouncy3);
+
+
+		var middle2 = new Point(605, 625);
+		var bouncy4 = new Path.Circle(middle2, 50);  
+		bouncy4.fillColor = "orange";
+		bounce4.push(bouncy4);
+
+		var leftBottom = new Point(200, 625);
+		var bouncy5 = new Path.Circle(leftBottom, 50);  
+		bouncy5.fillColor = "orange";
+		bounce5.push(bouncy5);
+
+		var rightBottom = new Point(1000, 625);
+		var bouncy6 = new Path.Circle(rightBottom, 50);  
+		bouncy6.fillColor = "orange";
+		bounce6.push(bouncy6);
+
+	}if(event.key==="w"){
+					sound23.play();
+					var maxPoint1 = new Point(view.size.width, view.size.height);
+					var randomPoint1 = Point.random();
+					var posPoint1 = maxPoint1 * randomPoint1;
+					var size1 = new Size(100);
+
+					var maxPoint2 = new Point(view.size.width, view.size.height);
+					var randomPoint2 = Point.random();
+					var posPoint2 = maxPoint2 * randomPoint2;
+					var size2 = new Size(50);
+					
+					var maxPoint3 = new Point(view.size.width, view.size.height);
+					var randomPoint3 = Point.random();
+					var posPoint3 = maxPoint3 * randomPoint3;
+					var size3 = new Size(120);
+
+					var maxPoint4 = new Point(view.size.width, view.size.height);
+					var randomPoint4 = Point.random();
+					var posPoint4 = maxPoint4 * randomPoint4;
+					var size4 = new Size(75);
+
+					var maxPoint5 = new Point(view.size.width, view.size.height);
+					var randomPoint5 = Point.random();
+					var posPoint5 = maxPoint5 * randomPoint5;
+					var size5 = new Size(80);
+
+					var maxPoint6 = new Point(view.size.width, view.size.height);
+					var randomPoint6 = Point.random();
+					var posPoint6 = maxPoint6 * randomPoint6;
+					var size6 = new Size(110);
+
+					var maxPoint7 = new Point(view.size.width, view.size.height);
+					var randomPoint7 = Point.random();
+					var posPoint7 = maxPoint7 * randomPoint7;
+					var size7 = new Size(100);
+					
+					var newSponge = new Path.RegularPolygon(posPoint1, 3, -50); 
+					triangleStars.push(newSponge);
+
+					var newSponge2 = new Path.RegularPolygon(posPoint2, 3, 75); 
+					triangleStars2.push(newSponge2);
+
+					var newSponge3 = new Path.RegularPolygon(posPoint3, 3, 80); 
+					triangleStars3.push(newSponge3);
+
+					var newSponge4 = new Path.RegularPolygon(posPoint4, 3, -100); 
+					triangleStars4.push(newSponge4);
+
+					var newSponge5 = new Path.RegularPolygon(posPoint5, 3, -100); 
+					triangleStars5.push(newSponge5);
+
+					var newSponge6 = new Path.RegularPolygon(posPoint6, 3, -110); 
+					triangleStars6.push(newSponge6);
+
+					var newSponge7 = new Path.RegularPolygon(posPoint7, 3, 120); 
+					triangleStars7.push(newSponge7);
+
+		}if(event.key==="x"){
+					sound24.play();
+					var middle1 = new Point(120, 120);
+					var size1 = new Size(100);
+					var newCirc1 = new Path.Circle(middle1, size1); 
+					arrX.push(newCirc1);
+
+					var middle2 = new Point(370, 230);
+					var newCirc2 = new Path.Circle(middle2, size1); 
+					arrX2.push(newCirc2);
+
+					var middle3 = new Point(620, 345);
+					var newCirc3 = new Path.Circle(middle3, size1); 
+					arrX3.push(newCirc3);
+
+					var middle4 = new Point(900, 460);
+					var newCirc4 = new Path.Circle(middle4, size1); 
+					arrX4.push(newCirc4);
+
+					var middle5 = new Point(1160, 590);
+					var newCirc5 = new Path.Circle(middle5, size1); 
+					arrX5.push(newCirc5);
+
+		}if(event.key==="y"){
+			sound25.play();
+			var point1 =new Point(1, 1);
+			var size1 = new Size(625, 800);
+
+			var leftMost = new Path.Rectangle(point1, size1); 
+			leftMost.fillColor = "purple";
+			open.push(leftMost);
+
+
+			var point2 =new Point(625, 1);
+			var size2 = new Size(653, 800);
+
+			var rightMost = new Path.Rectangle(point2, size2); 
+			rightMost.fillColor = "purple";
+			open2.push(rightMost);
+
+
+		}if(event.key==="z"){
+			sound26.play();
+			var point1 =new Point(777, 300);
+			var size1 = new Size(500, 300);
+
+			var rectangle = new Path.Rectangle(point1, size1); 
+			rectangle.fillColor = "purple";
+			arrZ.push(rectangle);
+		}
+
+
+
+			
+					
+
+		}
+
+
+					
+
+
+	
+
+	function onFrame(e){
+	
+	//A	
+		for (var i = 0; i < circles.length; i++) {
+			circles[i].fillColor = '#B987E8';
+			circles[i].scale(.999);
+
+		}
+
+		//B
+		for (var i = 0; i < rectangles.length; i++) {
+			rectangles[i].fillColor = '#FFDA75';
+			rectangles[i].scale(.99);
+		}
+
+		for (var i = 0; i < rectangles2.length; i++) {
+			rectangles2[i].fillColor = '#FFDA75';
+			rectangles2[i].scale(.99);
+		}
+
+		for (var i = 0; i < rectangles3.length; i++) {
+			rectangles3[i].fillColor = '#FFDA75';
+			rectangles3[i].scale(.99);
+		}
+
+		//C
+		for (var i = 0; i < squares.length; i++) {
+			squares[i].fillColor.hue += 2;
+			squares[i].scale(.99);
+			squares[i].strokeColor = 'white';
+			squares[i].strokeWidth = 10;
+		}
+
+		//D
+		for (var i = 0; i < bigRectangle.length; i++) {
+			bigRectangle[i].fillColor = "#112780";
+			bigRectangle[i].opacity = 0.5;
+			bigRectangle[i].shear(.05);
+		}	
+
+		//E
+		for (var i = 0; i < circles2.length; i++) {
+			circles2[i].fillColor = 'magenta';
+			circles2[i].translate(1);
+			circles2[i].strokeColor = 'white';
+			circles2[i].strokeWidth = 7;
+
+		}
+
+		//F
+		for (var i = 0; i < rotatings.length; i++) {
+			rotatings[i].fillColor = 'white';
+			rotatings[i].strokeColor = 'black';
+			rotatings[i].strokeWidth = 3;
+			rotatings[i].rotate(1);
+			rotatings[i].scale(.999);
+
+		}
+		
+		//G
+		for (var i = 0; i < bubblez.length; i++) {
+			bubblez[i].fillColor.hue += 1;
+			bubblez[i].strokeColor = 'white';
+			bubblez[i].strokeWidth = 10;
+			bubblez[i].scale(.95);
+		}
+
+		//H
+		for (var i = 0; i < colorFlash.length; i++) {
+			colorFlash[i].fillColor.hue += 2;
+			colorFlash[i].scale(5);
+		}
+
+		//I
+		for (var i = 0; i < skewBoxes.length; i++) {
+			skewBoxes[i].fillColor = "#07E6A6";
+			skewBoxes[i].strokeColor = 'white';
+			skewBoxes[i].strokeWidth = '3';
+			skewBoxes[i].skew(.5);
+		}	
+
+		//J
+		for (var i = 0; i < shearBox.length; i++) {
+			shearBox[i].fillColor = "#000D73";
+			
+			shearBox[i].strokeWidth = '3';
+			shearBox[i].shear(.05, .001);
+		}
+
+		//k
+		for (var i = 0; i < kay.length; i++) {
+			kay[i].fillColor = '#4FE4F7';
+			kay[i].scale(.99);
+			kay[i].strokeColor = 'white';
+			kay[i].strokeWidth = '3';
+		}
+
+		for (var i = 0; i < kay2.length; i++) {
+			kay2[i].fillColor = '#4FE4F7';
+			kay2[i].scale(.99);
+			kay2[i].strokeColor = 'white';
+			kay2[i].strokeWidth = '3';
+		}
+
+		for (var i = 0; i < kay3.length; i++) {
+			kay3[i].fillColor = '#FFDA75';
+			kay3[i].scale(.99);
+			kay3[i].strokeColor = 'white';
+			kay3[i].strokeWidth = '3';
+		}
+
+		for (var i = 0; i < kay4.length; i++) {
+			kay4[i].fillColor = '#FFDA75';
+			kay4[i].scale(.99);
+			kay4[i].strokeColor = 'white';
+			kay4[i].strokeWidth = '3';
+		}
+
+		for (var i = 0; i < kay5.length; i++) {
+			//kay5[i].fillColor = '#FFDA75';
+			kay5[i].scale(.99);
+			kay5[i].strokeColor = 'white';
+			kay5[i].strokeWidth = '3';
+		}
+
+		for (var i = 0; i < kay6.length; i++) {
+			//kay6[i].fillColor = '#FFDA75';
+			kay6[i].scale(.99);
+			kay6[i].strokeColor = 'white';
+			kay6[i].strokeWidth = '3';
+		}
+
+		for (var i = 0; i < kay6.length; i++) {
+			//kay7[i].fillColor = '#FFDA75';
+			kay7[i].scale(.99);
+			kay7[i].strokeColor = 'white';
+			kay7[i].strokeWidth = '3';
+		}
+
+		//L
+		for (var i = 0; i < flashL.length; i++) {
+			flashL[i].fillColor.hue += 2;
+			flashL[i].scale(5);
+		}
+
+		//M
+		for (var i = 0; i < value.length; i++) {
+			value[i].fillColor = 'orange';
+			value[i].translate(-1, -4);
+		}
+
+		//N
+		for (var i = 0; i < arrN1.length; i++) {
+			arrN1[i].fillColor = '#1740BD';
+			arrN1[i].translate(-3, -.05);
+		}
+		for (var i = 0; i < arrN2.length; i++) {
+			arrN2[i].fillColor = '#F2820A';
+			arrN2[i].translate(3, .05);
+		}
+		for (var i = 0; i < arrN3.length; i++) {
+			arrN3[i].fillColor = '#1740BD';
+			arrN3[i].translate(-3, -.05);
+		}
+		for (var i = 0; i < arrN4.length; i++) {
+			arrN4[i].fillColor = '#F2820A';
+			arrN4[i].translate(3, .05);
+		}
+		for (var i = 0; i < arrN5.length; i++) {
+			arrN5[i].fillColor = '#1740BD';
+			arrN5[i].translate(-3, -.05);
+		}
+
+		//O
+		for (var i = 0; i < rain.length; i++) {
+			rain[i].fillColor = '#73D993';
+			rain[i].translate(.00, .1);
+			rain[i].strokeColor = 'white';
+			rain[i].strokeWidth = '3';
+		}
+		for (var i = 0; i < rain2.length; i++) {
+			rain2[i].fillColor = '#0FBF12';
+			rain2[i].translate(.00, .2);
+			rain2[i].strokeColor = 'white';
+			rain2[i].strokeWidth = '3';
+		}
+		for (var i = 0; i < rain3.length; i++) {
+			rain3[i].fillColor = '#97F79A';
+			rain3[i].translate(.00, .3);
+			rain3[i].strokeColor = 'white';
+			rain3[i].strokeWidth = '3';
+		}
+		for (var i = 0; i < rain4.length; i++) {
+			rain4[i].fillColor = '#29732C';
+			rain4[i].translate(.00, .4);
+			rain4[i].strokeColor = 'white';
+			rain4[i].strokeWidth = '3';
+		}
+		for (var i = 0; i < rain5.length; i++) {
+			rain5[i].fillColor = '#23A128';
+			rain5[i].translate(.00, .5);
+			rain5[i].strokeColor = 'white';
+			rain5[i].strokeWidth = '3';
+		}
+		for (var i = 0; i < rain6.length; i++) {
+			rain6[i].fillColor = '#57F27B';
+			rain6[i].translate(.00, .6);
+			rain6[i].strokeColor = 'white';
+			rain6[i].strokeWidth = '3';
+		}
+		for (var i = 0; i < rain7.length; i++) {
+			rain7[i].fillColor = '#2BCF51';
+			rain7[i].translate(.00, .7);
+			rain7[i].strokeColor = 'white';
+			rain7[i].strokeWidth = '3';
+			rain7[i].opacity = 0.7;
+		}
+		for (var i = 0; i < rain8.length; i++) {
+			rain8[i].fillColor = '#1E9C3B';
+			rain8[i].translate(.00, .8);
+			rain8[i].strokeColor = 'white';
+			rain8[i].strokeWidth = '3';
+			rain8[i].opacity = 0.6;
+		}
+		for (var i = 0; i < rain9.length; i++) {
+			rain9[i].fillColor = '#04691C';
+			rain9[i].translate(.00, .9);
+			rain9[i].strokeColor = 'white';
+			rain9[i].strokeWidth = '3';
+			rain9[i].opacity = 0.5;
+		}
+
+		//P
+		for (var i = 0; i < screenCover.length; i++) {
+			screenCover[i].fillColor = '#FF5454';
+			screenCover[i].translate(-.099, -55);
+			screenCover[i].opacity = 0.9;
+			screenCover[i].strokeColor = 'white';
+			screenCover[i].strokeWidth = '5';
+		}
+		for (var i = 0; i < screenCover2.length; i++) {
+			screenCover2[i].fillColor = '#FAEE66';
+			screenCover2[i].translate(.099, 55);
+			screenCover2[i].opacity = 0.9;
+			screenCover2[i].strokeColor = 'white';
+			screenCover2[i].strokeWidth = '5';
+		}
+		for (var i = 0; i < screenCover3.length; i++) {
+			screenCover3[i].fillColor = '#9DE05E';
+			screenCover3[i].translate(-.099, -55);
+			screenCover3[i].opacity = 0.9;
+			screenCover3[i].strokeColor = 'white';
+			screenCover3[i].strokeWidth = '5';
+		}
+
+		//Q
+		for (var i = 0; i < slider.length; i++) {
+			slider[i].fillColor = '#FF24F8';
+			slider[i].translate(8, .05);
+			slider[i].opacity = 0.7;
+			
+			}
+		for (var i = 0; i < slider2.length; i++) {
+			slider2[i].fillColor = '#9524FF';
+			slider2[i].translate(-8, -.05);
+			slider2[i].opacity = 0.7;
+			}
+		for (var i = 0; i < slider3.length; i++) {
+			slider3[i].fillColor = '#2436FF';
+			slider3[i].translate(8, .05);
+			slider3[i].opacity = 0.7;
+			}
+		for (var i = 0; i < slider4.length; i++) {
+			slider4[i].fillColor = '#24ABFF';
+			slider4[i].translate(-8, -.05);
+			slider4[i].opacity = 0.7;
+			}
+
+		//R
+		for (var i = 0; i < triArr.length; i++) {
+			triArr[i].fillColor = '#24ABFF';
+			triArr[i].rotate(.8);
+			triArr[i].scale(.999);
+			triArr[i].fillColor = '#FF5454'
+			triArr[i].strokeColor = 'white';
+			triArr[i].strokeWidth = '5';
+			triArr[i].translate(1, .1);
+			}
+
+		//S
+		for (var i = 0; i < sep.length; i++) {
+			sep[i].fillColor = '#24ABFF';
+			sep[i].scale(.99);
+			
+			}
+		for (var i = 0; i < sep2.length; i++) {
+			sep2[i].fillColor = '#24ABFF';
+			sep2[i].translate(-.5, -.5)
+			}
+		for (var i = 0; i < sep3.length; i++) {
+			sep3[i].fillColor = '#24ABFF';
+			sep3[i].translate(.5, -.5);
+			}
+		for (var i = 0; i < sep4.length; i++) {
+			sep4[i].fillColor = '#24ABFF';
+			sep4[i].translate(00, .5);
+			}
+
+		//T
+		for (var i = 0; i < arrT.length; i++) {
+			//arrT[i].fillColor = '#FF5454';
+			arrT[i].strokeColor = 'white';
+			arrT[i].strokeWidth = '5';
+			arrT[i].rotate(2);
+			arrT[i].scale(.999);
+		}
+
+		//U
+		for (var i = 0; i < poly.length; i++) {
+			poly[i].fillColor.hue += 3;
+			poly[i].rotate(3);
+			poly[i].strokeWidth='10';
+			poly[i].strokeColor='white';
+			poly[i].scale(.99);
+			}
+
+		//V
+		for (var i = 0; i < bounce.length; i++) {
+			bounce[i].translate(.01, 1);
+			bounce[i].fillColor='#093485'
+			bounce[i].opacity = .7;
+			}
+		for (var i = 0; i < bounce2.length; i++) {
+			bounce2[i].translate(.01, 1);
+			bounce2[i].fillColor='#ECFF19'
+			bounce2[i].opacity = .8;
+			}
+		for (var i = 0; i < bounce3.length; i++) {
+			bounce3[i].translate(.01, 1);
+			bounce3[i].fillColor='#ECFF19'
+			bounce3[i].opacity = .8;
+			}
+		for (var i = 0; i < bounce4.length; i++) {
+			bounce4[i].translate(-.01, -1);
+			bounce4[i].fillColor='#ECFF19'
+			bounce4[i].opacity = .8;
+			}
+		for (var i = 0; i < bounce5.length; i++) {
+			bounce5[i].translate(-.01, -1);
+			bounce5[i].fillColor='#093485'
+			bounce5[i].opacity = .7;
+			}
+		for (var i = 0; i < bounce6.length; i++) {
+			bounce6[i].translate(-.01, -1);
+			bounce6[i].fillColor='#093485'
+			bounce6[i].opacity = .7;
+			}
+
+		//W
+		for (var i = 0; i < triangleStars.length; i++) {
+			triangleStars[i].fillColor = '#FF5521';
+			triangleStars[i].scale(.99);
+			triangleStars[i].strokeColor = 'white';
+			triangleStars[i].strokeWidth = '3';
+			triangleStars[i].rotate(.5);
+		}
+
+		for (var i = 0; i < triangleStars2.length; i++) {
+			//triangleStars2[i].fillColor = '#4FE4F7';
+			triangleStars2[i].scale(.99);
+			triangleStars2[i].strokeColor = 'white';
+			triangleStars2[i].strokeWidth = '3';
+			triangleStars2[i].rotate(.5);
+		}
+
+		for (var i = 0; i < triangleStars3.length; i++) {
+			triangleStars3[i].fillColor = '#21D6FF';
+			triangleStars3[i].scale(.99);
+			triangleStars3[i].strokeColor = 'white';
+			triangleStars3[i].strokeWidth = '3';
+			triangleStars3[i].rotate(.5);
+		}
+
+		for (var i = 0; i < triangleStars4.length; i++) {
+			//triangleStars4[i].fillColor = '#FFDA75';
+			triangleStars4[i].scale(.99);
+			triangleStars4[i].strokeColor = 'white';
+			triangleStars4[i].strokeWidth = '3';
+			triangleStars4[i].rotate(.5);
+		}
+
+		for (var i = 0; i < triangleStars5.length; i++) {
+			triangleStars5[i].fillColor = '#FF5521';
+			triangleStars5[i].scale(.99);
+			triangleStars5[i].strokeColor = 'white';
+			triangleStars5[i].strokeWidth = '3';
+			triangleStars5[i].rotate(.5);
+		}
+
+		for (var i = 0; i < triangleStars6.length; i++) {
+			//kay6[i].fillColor = '#FFDA75';
+			triangleStars6[i].scale(.99);
+			triangleStars6[i].strokeColor = 'white';
+			triangleStars6[i].strokeWidth = '3';
+			triangleStars6[i].rotate(.5);
+		}
+
+		for (var i = 0; i < triangleStars7.length; i++) {
+			triangleStars7[i].fillColor = '#21D6FF';
+			triangleStars7[i].scale(.99);
+			triangleStars7[i].strokeColor = 'white';
+			triangleStars7[i].strokeWidth = '3';
+			triangleStars7[i].rotate(.5);
+		}
+
+		//X
+		for (var i = 0; i < arrX.length; i++) {
+			arrX[i].fillColor = '#F587FF';
+			arrX[i].translate(.01, 2);
+			arrX[i].strokeColor='white';
+			arrX[i].strokeWidth='3';	
+		}
+		for (var i = 0; i < arrX2.length; i++) {
+			arrX2[i].fillColor = '#C145CC';
+			arrX2[i].translate(2, .05);
+			arrX2[i].strokeColor='white';
+			arrX2[i].strokeWidth='3';	
+		}
+		for (var i = 0; i < arrX3.length; i++) {
+			arrX3[i].fillColor = '#8D0599';
+			arrX3[i].shear(.03);
+		
+		}
+		for (var i = 0; i < arrX4.length; i++) {
+			arrX4[i].fillColor = '#C145CC';
+			arrX4[i].translate(-2, -.05);
+			arrX4[i].strokeColor='white';
+			arrX4[i].strokeWidth='3';
+		}
+		for (var i = 0; i < arrX5.length; i++) {
+			arrX5[i].fillColor = '#F587FF';
+			arrX5[i].translate(-.01, -2);
+			arrX5[i].strokeColor='white';
+			arrX5[i].strokeWidth='3';	
+		}
+
+		//Y
+		for (var i = 0; i < open.length; i++) {
+			open[i].fillColor = '#F59A07';
+			open[i].translate(-7, -.05);
+			open[i].opacity = 0.9;
+			open[i].strokeColor = 'white';
+			open[i].strokeWidth = '5';
+		}
+		for (var i = 0; i < open2.length; i++) {
+			open2[i].fillColor = '#FA2D8D';
+			open2[i].translate(7, .05);
+			open2[i].opacity = 0.9;
+			open2[i].strokeColor = 'white';
+			open2[i].strokeWidth = '5';
+		}
+
+		//Z
+		for (var i = 0; i < arrZ.length; i++) {
+			arrZ[i].fillColor = 'white';
+			arrZ[i].translate(3, .05);
+		}
+			
+
+		
+
+
+		
+		
+		
+
+
+		
+
+		
+			
+
+
+		
+	} //end of keydown function
+	
+
+</script>
+</head>
+<body>
+	<canvas id="myCanvas" resize></canvas>
+
+</body>
+</html>
