@@ -2,12 +2,26 @@
 <html>
 <head>
 	<title>Synesthetic Playground</title>
+
+	<link rel="stylesheet" type="text/css" href="sweetalert/dist/sweetalert.css"> 
+	<script src="sweetalert/dist/sweetalert.min.js"></script> 
+
 	<script type="text/javascript" src="paper-full.js"></script>
+
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/1.1.29/howler.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="circles.css">
 
+
+
+
 	<script type="text/paperscript" canvas="myCanvas">
+
+	swal({   
+		title: "Create Animations Triggered By Sound",   
+		text: "Start tapping your keyboard to play!.",   
+		imageUrl: "imagesused/snoopy3.gif" 
+	});
 
 	var sound1 = new Howl({urls: ['SoundsA/bubbles.mp3']});     	var sound14 = new Howl({urls: ['SoundsA/piston-3.mp3']}); 
 	var sound2 = new Howl({urls: ['SoundsA/clay.mp3']});     		var sound15 = new Howl({urls: ['SoundsA/prism-1.mp3']});
